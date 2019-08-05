@@ -24,6 +24,7 @@ class Episodios extends Model
     public function getLinksAttribute(): array
     {
         return [
+            'self' => '/api/episodios/' . $this->id,
             'series' => '/api/series/' . $this->serie_id
         ];
     }
